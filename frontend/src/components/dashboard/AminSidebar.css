@@ -1,0 +1,190 @@
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+}
+
+.sidebar.closed {
+    width: 80px;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+}
+
+.sidebar.closed .sidebar-title {
+    opacity: 0;
+    margin-bottom: 0;
+}
+
+/* Sidebar Toggle Button */
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.closed .menu-button {
+    transform: translateY(-60px);
+}
+
+/* Sidebar Menu */
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.closed ul {
+    transform: translateY(-70px);
+}
+
+/* Sidebar Menu Items */
+li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+li .icon {
+    font-size: 32px;
+    margin-right: 15px;
+    color: white;
+}
+
+li.active {
+    background-color: blue;
+}
+
+/* Adjust items when sidebar is closed */
+.sidebar.closed li {
+    justify-content: center;
+}
+
+.sidebar.closed .menu-text {
+    display: none;
+}
+
+.sidebar.closed li .icon {
+    margin-right: 0;
+    font-size: 25px;
+}
+
+/* Sidebar Links */
+li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Active Link */
+li a.active {
+    background-color: blue;
+    border-radius: 8px;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+    position: fixed;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+/* When Sidebar is Closed */
+.sidebar.closed + .dashboard-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: teal;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+    z-index: 1000;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* Adjust Navbar when Sidebar is Closed */
+.sidebar.closed + .dashboard-content .navbar {
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+/* Logout Button */
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-right: 40px;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+.btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-right: 40px;
+}

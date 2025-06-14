@@ -1,0 +1,72 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 12px 0;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.summary-icon {
+  font-size: 2.2rem;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: pop 1.8s infinite ease-in-out;
+}
+
+/* Icon Color Themes */
+.bg-yellow {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.bg-blue {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+}
+
+.bg-green {
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+}
+
+/* Content Styling */
+.summary-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.summary-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 6px 0 0;
+  color: #444;
+  display: flex;
+  justify-content: center;
+}
+
+/* Icon animation */
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}

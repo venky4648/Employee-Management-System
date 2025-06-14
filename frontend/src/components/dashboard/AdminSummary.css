@@ -1,0 +1,43 @@
+.admin-summary {
+    padding: 24px;
+}
+
+.admin-summary h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* First Summary Grid (3 Columns) */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Equal spacing between cards */
+}
+
+.leave-summmary-grid{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Equal spacing between cards */
+}
+
+.row2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Equal spacing between cards */
+}
+.text{
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+
+}

@@ -1,0 +1,23 @@
+.text-center{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search-add{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aqua;
+    font-weight: bold;
+}
+.search{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 300px;
+}
