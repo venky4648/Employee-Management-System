@@ -20,12 +20,15 @@ const List = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/leave/${id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      console
+      const response = await axios.get(
+        `http://localhost:3000/api/leave/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      console;
       if (response.data.success && response.data.leaves) {
         setLeaves(response.data.leaves);
         setFilteredLeaves(response.data.leaves);
@@ -51,7 +54,7 @@ const List = () => {
       borderCollapse: "collapse",
       backgroundColor: "#fff",
       boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-      height:'100%'
+      height: "100%",
     },
     th: {
       border: "1px solid #ddd",
@@ -75,7 +78,13 @@ const List = () => {
         <h2 className="text-2xl font-bold">Manage Leaves</h2>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "space-between", margin: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "20px",
+        }}
+      >
         <input
           type="search"
           placeholder="Search By Status"
@@ -88,20 +97,47 @@ const List = () => {
             width: "220px",
           }}
         />
-        <button
-          style={{ backgroundColor: "#007BFF", padding: "8px 14px", borderRadius: "5px" }}
-        >
-          <Link to="/employee-dashboard/add-leave" style={{ color: "white", textDecoration: "none" }}>
-            Add Leave
-          </Link>
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            style={{
+              backgroundColor: "#007BFF",
+              padding: "8px 14px",
+              borderRadius: "5px",
+            }}
+          >
+            <Link
+              to="/employee-dashboard/add-leave"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Add Leave
+            </Link>
+          </button>
+          <button
+            style={{
+              backgroundColor: "#28a745",
+              padding: "8px 14px",
+              borderRadius: "5px",
+            }}
+          >
+            <Link
+              to="/employee-dashboard/chatbot"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Chatbot
+            </Link>
+          </button>
+        </div>
       </div>
 
       <div style={{ overflowX: "auto", padding: "20px" }}>
         {empLoading ? (
-          <div style={{ textAlign: "center", fontSize: "18px" }}>Loading...</div>
+          <div style={{ textAlign: "center", fontSize: "18px" }}>
+            Loading...
+          </div>
         ) : filteredLeaves.length === 0 ? (
-          <div style={{ textAlign: "center", fontSize: "18px" }}>No leave records found.</div>
+          <div style={{ textAlign: "center", fontSize: "18px" }}>
+            No leave records found.
+          </div>
         ) : (
           <table style={styles.table}>
             <thead>
@@ -120,10 +156,16 @@ const List = () => {
                 <tr key={leave._id}>
                   <td style={styles.td}>{sno++}</td>
                   <td style={styles.td}>{leave.leaveType}</td>
-                  <td style={styles.td}>{new Date(leave.startDate).toLocaleDateString()}</td>
-                  <td style={styles.td}>{new Date(leave.endDate).toLocaleDateString()}</td>
+                  <td style={styles.td}>
+                    {new Date(leave.startDate).toLocaleDateString()}
+                  </td>
+                  <td style={styles.td}>
+                    {new Date(leave.endDate).toLocaleDateString()}
+                  </td>
                   <td style={styles.td}>{leave.reason}</td>
-                  <td style={styles.td}>{new Date(leave.createdAt).toLocaleDateString()}</td>
+                  <td style={styles.td}>
+                    {new Date(leave.createdAt).toLocaleDateString()}
+                  </td>
                   <td style={styles.td}>{leave.status}</td>
                 </tr>
               ))}

@@ -19,9 +19,10 @@ import EditEmp from "./components/empoloyee/EditEmp.jsx";
 import AddSalary from "./components/salary/Add.jsx";
 import ViewSalary from "./components/salary/viewsalary.jsx";
 import SummaryCard from "./pages/EmployeeDashboard/Summary.jsx";
-import View from './components/empoloyee/view.jsx';
-import ViewList from './components/leave/List.jsx';
-import AddLeaves from './components/leave/Add.jsx';
+import View from "./components/empoloyee/view.jsx";
+import ViewList from "./components/leave/List.jsx";
+import AddLeaves from "./components/leave/Add.jsx";
+import Chatbot from "./components/leave/Chatbot.jsx";
 import Setting from "./components/EmployeeDashboard/Setting.jsx";
 import Table from "./components/leave/Table.jsx";
 import ViewLists from "./components/leave/ViewList.jsx";
@@ -43,21 +44,59 @@ function App() {
           }
         >
           <Route index element={<AdminSummary />} />
-          <Route exact path="/admin-dashboard/dashboard" element={<AdminSummary />} />
-          <Route exact path="/admin-dashboard/department" element={<DepartmentList />} />
-          <Route exact path="/admin-dashboard/department/add-department" element={<AddDepartment />} />
+          <Route
+            exact
+            path="/admin-dashboard/dashboard"
+            element={<AdminSummary />}
+          />
+          <Route
+            exact
+            path="/admin-dashboard/department"
+            element={<DepartmentList />}
+          />
+          <Route
+            exact
+            path="/admin-dashboard/department/add-department"
+            element={<AddDepartment />}
+          />
           <Route exact path="/admin-dashboard/add-employee" element={<Add />} />
-          <Route exact path="/admin-dashboard/employee/:id" element={<ViewEmployee />} />
-          <Route exact path="/admin-dashboard/edit-employee/:id" element={<EditEmp />} />
-          <Route exact path="/admin-dashboard/department/:id" element={<EditDepartment />} />
+          <Route
+            exact
+            path="/admin-dashboard/employee/:id"
+            element={<ViewEmployee />}
+          />
+          <Route
+            exact
+            path="/admin-dashboard/edit-employee/:id"
+            element={<EditEmp />}
+          />
+          <Route
+            exact
+            path="/admin-dashboard/department/:id"
+            element={<EditDepartment />}
+          />
           <Route exact path="/admin-dashboard/employee" element={<List />} />
-          <Route exact path="/admin-dashboard/employees/salary/:id" element={<ViewSalary />} />
-          <Route exact path="/admin-dashboard/salary/add" element={<AddSalary />} />
+          <Route
+            exact
+            path="/admin-dashboard/employees/salary/:id"
+            element={<ViewSalary />}
+          />
+          <Route
+            exact
+            path="/admin-dashboard/salary/add"
+            element={<AddSalary />}
+          />
           <Route exact path="/admin-dashboard/settings" element={<Setting />} />
           <Route exact path="/admin-dashboard/leave" element={<Table />} />
-          <Route exact path="/admin-dashboard/leaves/:id" element={<ViewLists />} />
-          <Route path="/admin-dashboard/employees/leaves/:id" element={<ViewList />} />
-          
+          <Route
+            exact
+            path="/admin-dashboard/leaves/:id"
+            element={<ViewLists />}
+          />
+          <Route
+            path="/admin-dashboard/employees/leaves/:id"
+            element={<ViewList />}
+          />
         </Route>
 
         <Route
@@ -71,11 +110,36 @@ function App() {
           }
         >
           <Route index element={<SummaryCard />} />
-          <Route exact path="/employee-dashboard/profile/:id" element={<View />} />
-          <Route exact path="/employee-dashboard/leave/:id" element={<ViewList />} />
-          <Route exact path="/employee-dashboard/add-leave" element={<AddLeaves />} />
-          <Route exact path="/employee-dashboard/salary/:id" element={<ViewSalary />} />
-          <Route exact path="/employee-dashboard/settings" element={<Setting />} />
+          <Route
+            exact
+            path="/employee-dashboard/profile/:id"
+            element={<View />}
+          />
+          <Route
+            exact
+            path="/employee-dashboard/leave/:id"
+            element={<ViewList />}
+          />
+          <Route
+            exact
+            path="/employee-dashboard/add-leave"
+            element={<AddLeaves />}
+          />
+          <Route
+            exact
+            path="/employee-dashboard/chatbot"
+            element={<Chatbot />}
+          />
+          <Route
+            exact
+            path="/employee-dashboard/salary/:id"
+            element={<ViewSalary />}
+          />
+          <Route
+            exact
+            path="/employee-dashboard/settings"
+            element={<Setting />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
