@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import '../dashboard/AminSidebar.css'; // Import the CSS file for styling
+import "../dashboard/AminSidebar.css"; // Import the CSS file for styling
 import { NavLink } from "react-router-dom";
 import {
   FaTachometerAlt,
@@ -8,6 +8,7 @@ import {
   FaCalendarAlt,
   FaMoneyBill,
   FaCog,
+  FaRobot,
 } from "react-icons/fa";
 import "../dashboard/AdminSummary";
 import { useAuth } from "../../context/authContext";
@@ -39,6 +40,11 @@ const EmployeeSidebar = () => {
       path: `/employee-dashboard/leave/${user?._id}`,
     },
     {
+      name: "Chatbot",
+      icon: <FaRobot />,
+      path: "/employee-dashboard/chatbot",
+    },
+    {
       name: "Salary",
       icon: <FaMoneyBill />,
       path: `/employee-dashboard/salary/${user?._id}`,
@@ -54,7 +60,10 @@ const EmployeeSidebar = () => {
     <div className={`sidebar ${!isOpen ? "closed" : ""}`}>
       <h1 className="sidebar-title">Employee Management System</h1>
 
-      <button className="menu-button" onClick={() => setIsOpen((prev) => !prev)}>
+      <button
+        className="menu-button"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         {isOpen ? "✖" : "☰"}
       </button>
 
