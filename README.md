@@ -34,7 +34,7 @@ Built using **React.js** for the frontend and **Node.js + Express.js** for the b
     - npm install
 3. **Create a .env file inside the server/ folder**
    -  ``env
-    - PORT=5000
+    - PORT="PORT"
     - MONGO_URI=your_mongodb_connection_string
     - JWT_SECRET=your_secret_key
 4. **Start the backend server**
