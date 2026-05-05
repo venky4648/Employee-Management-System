@@ -90,6 +90,7 @@ const Add = () => {
             <label>Employee ID</label>
             <input type="text" name="employeeId" onChange={handleChange} className="input-field" placeholder="Employee ID" />
           </div>
+          
           <div className="form-group">
             <label>Date of Birth</label>
             <input type="date" name="dob" onChange={handleChange} className="input-field" />
