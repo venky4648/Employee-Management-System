@@ -9,8 +9,9 @@ import leaveRouter from './routes/leave.js';
 import settingRouter from './routes/setting.js';
 import dashboardRouter from './routes/dashboard.js';
 
-connectDB()
 const app=express();
+
+await connectDB();
 app.use(express.static('public/uploads')); // Correct static path
 
 app.use(cors());
