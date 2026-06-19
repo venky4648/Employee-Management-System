@@ -16,7 +16,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3000/api/auth/login", { email, password });
+            const response = await axios.post("https://employee-management-system-1-fs21.onrender.com/api/auth/login", { email, password });
             console.log(response.data);
 
             if (response.data.success) {

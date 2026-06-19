@@ -27,7 +27,7 @@ const Add = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/leave/add`,
+        `https://employee-management-system-1-fs21.onrender.com/api/leave/add`,
         requestBody,
         {
           headers: {

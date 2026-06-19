@@ -20,7 +20,7 @@ const AdminDashboard = () => {
           return;
         }
 
-        const response = await fetch("http://localhost:3000/api/auth/verify", {
+        const response = await fetch("https://employee-management-system-1-fs21.onrender.com/api/auth/verify", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

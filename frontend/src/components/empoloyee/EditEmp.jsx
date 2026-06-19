@@ -23,7 +23,7 @@ const EditEmp = () => {
     const fetchEmployee = async () => {
       setEmpLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3000/api/employee/${id}`, {
+        const response = await axios.get(`https://employee-management-system-1-fs21.onrender.com/api/employee/${id}`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -58,7 +58,7 @@ const EditEmp = () => {
 
 const fetchDepartments = async () => {
     try {
-        const response = await axios.get("http://localhost:3000/api/department/all", {
+        const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/department/all", {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -89,7 +89,7 @@ const fetchDepartments = async () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:3000/api/employee/${id}`, employee, {
+      const response = await axios.put(`https://employee-management-system-1-fs21.onrender.com/api/employee/${id}`, employee, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

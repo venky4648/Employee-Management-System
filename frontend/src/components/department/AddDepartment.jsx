@@ -22,7 +22,7 @@ const AddDepartment = () => {
     console.log("sending data",department);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/department/add",
+        "https://employee-management-system-1-fs21.onrender.com/api/department/add",
         department,
         {
           headers: {

@@ -13,7 +13,7 @@ const ViewEmployee = () => {
         const fetchEmployee = async () => {
             setEmpLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/api/employee/${id}`, {
+                const response = await axios.get(`https://employee-management-system-1-fs21.onrender.com/api/employee/${id}`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -42,7 +42,7 @@ const ViewEmployee = () => {
             <h1 className="employee-heading">Employee Details</h1>
             <div className="employee-card">
                 <div className="employee-profile">
-                    <img src={`http://localhost:3000/${employee?.userId?.profileImage}`} alt="Employee Profile" />
+                    <img src={`https://employee-management-system-1-fs21.onrender.com/${employee?.userId?.profileImage}`} alt="Employee Profile" />
                 </div>
                 <div className="employee-details">
                     <p><span>Name:</span> {employee?.userId?.name}</p>

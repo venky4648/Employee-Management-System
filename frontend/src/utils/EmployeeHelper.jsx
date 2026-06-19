@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const fetchDepartment = async () => {
   let departments;
   try {
-    const response = await axios.get("http://localhost:3000/api/department/all", {
+    const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/department/all", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -31,7 +31,7 @@ export const fetchDepartment = async () => {
 export const getEmployees = async (id) => {
   let employees = [];
   try {
-    const response = await axios.get(`http://localhost:3000/api/employee/department/${id}`, {
+    const response = await axios.get(`https://employee-management-system-1-fs21.onrender.com/api/employee/department/${id}`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,

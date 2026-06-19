@@ -14,7 +14,7 @@ const ViewList = () => {
         const fetchLeave = async () => {
             setLeaveLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/api/leave/details/${id}`, {
+                const response = await axios.get(`https://employee-management-system-1-fs21.onrender.com/api/leave/details/${id}`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,7 +37,7 @@ const ViewList = () => {
 
     const changeStatus = async (id,status)=>{
         try {
-            const response = await axios.put(`http://localhost:3000/api/leave/status/${id}`, { status }, {
+            const response = await axios.put(`https://employee-management-system-1-fs21.onrender.com/api/leave/status/${id}`, { status }, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +66,7 @@ const ViewList = () => {
             <h1 className="employee-heading">Leave Details</h1>
             <div className="employee-card">
                 <div className="employee-profile">
-                    <img src={`http://localhost:3000/${leave?.employeeId?.userId?.profileImage}`} alt="Employee Profile" />
+                    <img src={`https://employee-management-system-1-fs21.onrender.com/${leave?.employeeId?.userId?.profileImage}`} alt="Employee Profile" />
                 </div>
                 <div className="employee-details">
                     <p><span>Name:</span> {leave?.employeeId?.userId?.name}</p>

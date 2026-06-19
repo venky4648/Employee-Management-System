@@ -16,14 +16,14 @@ const authContext = ({ children }) => {
         const verifyUser = async () => {
             try {
                 const token = localStorage.getItem("token");
-                console.log("Fetching:", "http://localhost:3000/api/auth/verify", "Token:", token);
+                console.log("Fetching:", "https://employee-management-system-1-fs21.onrender.com/api/auth/verify", "Token:", token);
     
                 if (!token) {
                     setUser(null);
                     return;
                 }
     
-                const response = await axios.get("http://localhost:3000/api/auth/verify", {
+                const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/auth/verify", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
     

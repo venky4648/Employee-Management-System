@@ -13,7 +13,7 @@ const AdminSummary = () => {
   useEffect (()=>{
     const fetchSummary=async()=>{
       try{
-        const response = await axios.get("http://localhost:3000/api/dashboard/summary",{
+        const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/dashboard/summary",{
           headers :{
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

@@ -28,7 +28,7 @@ export const DepartmentButtons = ({ _id, onDepartmentDelete }) => {
         const confirmDelete = window.confirm('Are you sure you want to delete?');
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`http://localhost:3000/api/department/${_id}`, {
+                const response = await axios.delete(`https://employee-management-system-1-fs21.onrender.com/api/department/${_id}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         Authorization: `Bearer ${localStorage.getItem('token')}`,

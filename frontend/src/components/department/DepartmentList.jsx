@@ -18,7 +18,7 @@ const DepartmentList = () => {
     const fetchDepartments = async () => {
         setDepLoading(true);
         try {
-            const response = await axios.get("http://localhost:3000/api/department/all", {
+            const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/department/all", {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${localStorage.getItem("token")}`,

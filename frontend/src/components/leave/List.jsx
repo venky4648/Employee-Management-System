@@ -21,7 +21,7 @@ const List = () => {
   const fetchLeaves = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/leave/${id}`,
+        `https://employee-management-system-1-fs21.onrender.com/api/leave/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

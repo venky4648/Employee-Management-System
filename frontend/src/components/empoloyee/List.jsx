@@ -24,7 +24,7 @@ const List = () => {
   const fetchEmployees = async () => {
     setEmpLoading(true);
     try {
-      const response = await axios.get("http://localhost:3000/api/employee/all", {
+      const response = await axios.get("https://employee-management-system-1-fs21.onrender.com/api/employee/all", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -33,7 +33,7 @@ const List = () => {
 
       if (response.data.success) {
         let sno = 1;
-        const baseUrl = "http://localhost:3000";
+        const baseUrl = "https://employee-management-system-1-fs21.onrender.com";
         const data = response.data.employees.map((emp) => ({
           _id: emp._id,
           sno: sno++,
