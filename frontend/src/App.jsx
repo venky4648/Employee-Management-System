@@ -17,7 +17,7 @@ import Add from "./components/empoloyee/Add.jsx";
 import ViewEmployee from "./components/empoloyee/view.jsx";
 import EditEmp from "./components/empoloyee/EditEmp.jsx";
 import AddSalary from "./components/salary/Add.jsx";
-import ViewSalary from "./components/salary/viewsalary.jsx";
+import ViewSalary from "./components/salary/ViewSalary.jsx";
 import SummaryCard from "./pages/EmployeeDashboard/Summary.jsx";
 import View from "./components/empoloyee/view.jsx";
 import ViewList from "./components/leave/List.jsx";
