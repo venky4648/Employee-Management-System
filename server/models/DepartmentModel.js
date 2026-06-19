@@ -1,7 +1,7 @@
 import mongoose, { Query } from 'mongoose';
-import Leave from'./Leaves.js'
+import Leave from './Leaves.js'
 import Employee from './Employee.js';
-import salary from './Salary.js'; // Assuming you have a Salary model
+import Salary from './Salary.js';// Assuming you have a Salary model
 
 const departmentSchema = mongoose.Schema({
     dep_name: { type: String, required: true },
@@ -17,8 +17,8 @@ departmentSchema.pre('save', function (next) {
 });
 
 
-departmentSchema.pre("deleteOne",{document: true,query:false}, async function (next) {
-    try{
+departmentSchema.pre("deleteOne", { document: true, query: false }, async function (next) {
+    try {
         const employees = await Employee.find({ department: this._id });
         const empIds = employees.map(emp => emp._id);
         await Employee.deleteMany({ _id: { $in: empIds } });
