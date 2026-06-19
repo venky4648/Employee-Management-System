@@ -1,6 +1,6 @@
 import Employee from "../models/Employee.js";
 import Department from "../models/DepartmentModel.js";
-import Salary from "../models/Salary.js";
+import Salary from "../models/salary.js";
 import Leave from "../models/Leaves.js";
 
 export const getSummary = async (req, res) => {
