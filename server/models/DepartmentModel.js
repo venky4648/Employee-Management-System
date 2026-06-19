@@ -1,7 +1,7 @@
 import mongoose, { Query } from 'mongoose';
 import Leave from './Leaves.js'
 import Employee from './Employee.js';
-import Salary from './Salary.js';// Assuming you have a Salary model
+import Salary from './salary.js';// Assuming you have a Salary model
 
 const departmentSchema = mongoose.Schema({
     dep_name: { type: String, required: true },
